@@ -1,16 +1,29 @@
-package ir.sinash.notetaker;
+package ir.sinash.notetaker.activities;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.couchbase.lite.Manager;
+
+import ir.sinash.notetaker.R;
+
 
 public class MainActivity extends ActionBarActivity {
 
+    private Manager manager;
+    private static Context context;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
+        context = getApplicationContext();
+
         setContentView(R.layout.activity_main);
     }
 
